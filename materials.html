@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Excel.tj</title>
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="style/slider.css" />
+    <link rel="stylesheet" href="style/swiper-bundle.min.css">
+</head>
+
+<body>
+    <div class="menu-container">
+        <img src="images/logo.png" class="logo" alt="logo">
+        <button class="burger" onclick="toggleMenu()">☰ Меню</button>
+        <nav class="menu">
+            <a href="index.html">Асосӣ</a>
+            <a href="lessons.html#lessonsSection">Дарсҳо</a>
+            <a href="test.html#TestSection">Тестҳо</a>
+            <a href="materials.html#MaterialsSection">Маводҳо</a>
+            <!-- <a href="news.html#NewsSection">Хабархо</a>
+            <a href="#" id="subscribeBtn">Ба қайд гири</a> -->
+        </nav>
+    </div>
+
+    <div class="containerr" id="MaterialsSection">
+        <h1 class="title">Маводҳо</h1>
+    </div>
+
+    <div class="tabsb">
+        <div class="tab-buttons">
+            <button class="tabsb-btn active" onclick="openTab(event, 'videoTab')">🎥 Видео</button>
+            <button class="tabsb-btn" onclick="openTab(event, 'presentationTab')">📊 Презентация</button>
+        </div>
+
+        <div class="tab-content active" id="videoTab">
+            <div class="video-grid">
+                <div class="video-item"><video src="videos/Дарси 1. Шиносоӣ бо Excel.mp4" controls></video>
+                    <p>Шиносоӣ бо MS Excel</p>
+                </div>
+                <div class="video-item"><video src="videos/1.Чи тавр аз рӯи таърихи рӯз, рӯзи ҳафтаро муайян намуд.mp4" controls></video>
+                    <p>1. Чӣ тавр аз рӯйи таърихи рӯз, рӯзи ҳафтаро муайян кунем</p>
+                </div>
+                <div class="video-item"><video src="videos/2.Роҳи осон барои навистани таърихи рӯз ва вақт дар Excel.mp4" controls></video>
+                    <p>2. Роҳи осон барои навиштани таърихи рӯз ва вақт дар MS Excel</p>
+                </div>
+                <div class="video-item"><video src="videos/3.Роҳи осон барои удалит кардани калимаҳои такроршуда дар Excel.mp4" controls></video>
+                    <p>3. Роҳи осон барои нест кардани калимаҳои такроршуда дар MS Excel</p>
+                </div>
+                <div class="video-item"><video src="videos/4.Роҳи осон барои бо ранг ишора кардани калимаҳои такроршуда дар Excel.mp4" controls></video>
+                    <p>4. Роҳи осон барои бо ранг ишора кардани калимаҳои такроршуда дар MS Excel</p>
+                </div>
+                <div class="video-item"><video src="videos/5.Се роҳи ҷойиваз намудани сутунҳо.mp4" controls></video>
+                    <p>5. Се роҳи ҷойиваз кардани сутунҳо</p>
+                </div>
+                <div class="video-item"><video src="videos/6.Чи гуна дар Excel маълумотҳои ду сутунро дар як сутун ҷойгир кунем.mp4" controls></video>
+                    <p>6. Чӣ гуна дар MS Excel маълумотҳои ду сутунро дар як сутун ҷойгир кунем</p>
+                </div>
+                <div class="video-item"><video src="videos/7.Роҳи осон барои мувофиқ кардани баландии сатр ва паҳнои сутун дар Excel.mp4" controls></video>
+                    <p>7. Роҳи осон барои мувофиқ кардани баландии сатр ва паҳнои сутун дар MS Excel</p>
+                </div>
+                <div class="video-item"><video src="videos/8.Чи тавр дар Excel якчанд ҳуҷраро бо арзишҳои якхела пур кунем.mp4" controls></video>
+                    <p>8. Чӣ тавр дар MS Excel якчанд ҳуҷраро бо арзишҳои якхела пур кунем</p>
+                </div>
+                <div class="video-item"><video src="videos/9_Тарзи_истифода_бурдани_фоиз_дар_Excel.mp4" controls></video>
+                    <p>9. Тарзи истифодаи фоиз дар MS Excel</p>
+                </div>
+                <div class="video-item"><video src="videos/10_Роҳи_осон_барои_кӯтоҳ_навистани_насаб_ном_ва_номи_падар_ФИО_дар.mp4" controls></video>
+                    <p>10. Роҳи осон барои кӯтоҳ навиштани насаб, ном ва номи падар (ФИО)</p>
+                </div>
+                <div class="video-item"><video src="videos/11.Рӯйхати афтанда дар Excel.mp4" controls></video>
+                    <p>11. Рӯйхати афтанда дар MS Excel</p>
+                </div>
+                <div class="video-item"><video src="videos/12_Роҳҳои_пур_кардани_ҳуҷраҳои_холӣ_дар_Excel.mp4" controls></video>
+                    <p>12. Роҳҳои пур кардани ҳуҷраҳои холӣ дар MS Excel</p>
+                </div>
+                <div class="video-item"><video src="videos/13_Ба_таври_худкор_иваз_намудани_паҳноии_сутун_дар_Excel.mp4" controls></video>
+                    <p>13. Ба таври худкор иваз кардани паҳноии сутун дар MS Excel</p>
+                </div>
+                <div class="video-item"><video src="videos/14_Ёфтани_фарқият_байни_ду_таблита_дар_Excel.mp4" controls></video>
+                    <p>14. Ёфтани фарқият байни ду ҷадвал дар MS Excel</p>
+                </div>
+                <div class="video-item"><video src="videos/15.Ҷойиваз намудани сатрҳо дар Excel.mp4" controls></video>
+                    <p>15. Ҷойиваз кардани сатрҳо дар MS Excel</p>
+                </div>
+                <div class="video-item"><video src="videos/16_Нусхабардорӣ_кардани_саҳифа_ё_лист_дар_тӯли_якчанд_сония_дар.mp4" controls></video>
+                    <p>16. Нусхабардории саҳифа ё варақ дар тӯли якчанд сония</p>
+                </div>
+                <div class="video-item"><video src="videos/17_Нигоҳ_доштани_рақами_сифр_дар_Excel.mp4" controls></video>
+                    <p>17. Нигоҳ доштани рақами сифр дар MS Excel</p>
+                </div>
+                <div class="video-item"><video src="videos/18_Нест_кардани_сатрҳои_холӣ_дар_Excel.mp4" controls></video>
+                    <p>18. Нест кардани сатрҳои холӣ дар MS Excel</p>
+                </div>
+                <div class="video-item"><video src="videos/19_Якбора_нест_кардани_якчанд_ҳуҷра_дар_Excel.mp4" controls></video>
+                    <p>19. Якбора нест кардани якчанд ҳуҷра дар MS Excel</p>
+                </div>
+                <div class="video-item"><video src="videos/20 горячие клавиши дар Excel.mp4" controls></video>
+                    <p>20. Комбинацияҳои тугмаҳои кӯтоҳ дар MS Excel</p>
+                </div>
+                <div class="video-item"><video src="videos/21_Вставить_кардани_таблитсаи_Excel_бо_нигоҳ_доштани_паҳнои_сутунҳо.mp4" controls></video>
+                    <p>21. Гузоштани ҷадвали MS Excel бо нигоҳ доштани паҳнои сутунҳо</p>
+                </div>
+                <div class="video-item"><video src="videos/22_Ба_нақша_гирифтани_рӯзҳои_корӣ_дар_Excel.mp4" controls></video>
+                    <p>22. Ба нақша гирифтани рӯзҳои корӣ дар MS Excel</p>
+                </div>
+                <div class="video-item"><video src="videos/23_Пинҳон_кардани_маълумотҳо_дар_Excel.mp4" controls></video>
+                    <p>23. Пинҳон кардани маълумотҳо дар MS Excel</p>
+                </div>
+                <div class="video-item"><video src="videos/24.Бо ҳарф навистани моҳҳо дар Excel.mp4" controls></video>
+                    <p>24. Навиштани моҳҳо бо ҳарф дар MS Excel</p>
+                </div>
+                <div class="video-item"><video src="videos/25.Иваз намудани моҳ дар Excel.mp4" controls></video>
+                    <p>25. Иваз кардани номи моҳ дар MS Excel</p>
+                </div>
+                <div class="video-item"><video src="videos/26_Бо_таври_худкор_ҳисоб_кардани_рӯзҳои_боқимонда_дар_Excel.mp4" controls></video>
+                    <p>26. Ба таври худкор ҳисоб кардани рӯзҳои боқимонда дар MS Excel</p>
+                </div>
+                <div class="video-item"><video src="videos/27_Нусхабардорӣ_намудани_формати_текст_аз_ҳуҷра_дар_Excel.mp4" controls></video>
+                    <p>27. Нусхабардории формати матн аз ҳуҷра дар MS Excel</p>
+                </div>
+                <div class="video-item"><video src="videos/28_Ҳисоб_кардани_суммаи_умумӣ_бе_назардошти_суммаи_мобайнӣ_дар_Excel.mp4" controls></video>
+                    <p>28. Ҳисоб кардани маблағи умумӣ бе назардошти маблағи мобайнӣ дар MS Excel</p>
+                </div>
+                <div class="video-item"><video src="videos/29_Рақамгузорӣ_кардан_бо_нуқта_дар_Excel.mp4" controls></video>
+                    <p>29. Рақамгузорӣ бо истифодаи нуқта дар MS Excel</p>
+                </div>
+                <div class="video-item"><video src="videos/30_Чи_кор_кунем,_ки_дар_Excel_рақамгузорӣ_навбати_худро_гум_накунад.mp4" controls></video>
+                    <p>30. Чӣ кор кунем, ки рақамгузорӣ дар MS Excel навбати худро гум накунад</p>
+                </div>
+                <div class="video-item"><video src="videos/31_Барқарор_кардани_файл_ё_ин_ки_ҷурсозии_худқайдкунӣ_дар_Excel.mp4" controls></video>
+                    <p>31. Барқарор кардани файл ё танзимоти худкор ҳифзшавӣ дар MS Excel</p>
+                </div>
+                <div class="video-item"><video src="videos/32_3_роҳи_истифода_бурдани_сумма_дар_Excel.mp4" controls></video>
+                    <p>32. Се роҳ барои истифодаи сумма дар MS Excel</p>
+                </div>
+                <div class="video-item"><video src="videos/33.Ҳисоб кардани синну сол дар Excel.mp4" controls></video>
+                    <p>33. Ҳисоб кардани синну сол дар MS Excel</p>
+                </div>
+                <div class="video-item"><video src="videos/34_Бо_ҳарфи_калон_навистани_аввали_ҳар_як_калима_дар_Excel.mp4" controls></video>
+                    <p>34. Навиштани ҳар як калима бо ҳарфи калон дар MS Excel</p>
+                </div>
+                <div class="video-item"><video src="videos/35_Аниқ_намудани_статуси_кори_иҷрошуда_дар_Excel.mp4" controls></video>
+                    <p>35. Муайян кардани ҳолати иҷрои кор дар MS Excel</p>
+                </div>
+                <div class="video-item"><video src="videos/36_Тарзи_истифода_бурдани_функсияҳои_Левсимв_ва_Правсимв_дар_Excel.mp4" controls></video>
+                    <p>36. Тарзи истифодаи функсияҳои LEFT ва RIGHT дар MS Excel</p>
+                </div>
+                <div class="video-item"><video src="videos/37_Тарзи_истифода_бурдани_функсияи_ПСТР_дар_Excel.mp4" controls></video>
+                    <p>37. Тарзи истифодаи функсияи MID дар MS Excel</p>
+                </div>
+                <div class="video-item"><video src="videos/38_Тарзи_истифода_бурдани_функсияи_СЖПРОБЕЛЫ_дар_Excel.mp4" controls></video>
+                    <p>38. Тарзи истифодаи функсияи TRIM дар MS Excel</p>
+                </div>
+                <div class="video-item"><video src="videos/39_Тарзи_истифода_бурдани_функсияҳои_НАЙТИ_ва_ПОИСК_дар_Excel.mp4" controls></video>
+                    <p>39. Тарзи истифодаи функсияҳои FIND ва SEARCH дар MS Excel</p>
+                </div>                
+            </div>
+        </div>
+
+        <div class="tab-content tabpre" id="presentationTab">
+            <div class="pdf-grid">
+              <!-- PDF 1 -->
+              <div class="pdf-item">
+                <a href="pre/рузи 8.pdf" target="_blank">
+                  <iframe src="pre/рузи 8.pdf#toolbar=0&navpanes=0&scrollbar=0"></iframe>
+                  <p>Дарси 1</p>
+                </a>
+              </div>
+          
+              <!-- PDF 2 -->
+              <div class="pdf-item">
+                <a href="pre/рузи 9.pdf" target="_blank">
+                  <iframe src="pre/рузи 9.pdf#toolbar=0&navpanes=0&scrollbar=0"></iframe>
+                  <p>Дарси 2</p>
+                </a>
+              </div>
+          
+              <!-- PDF 3 -->
+              <div class="pdf-item">
+                <a href="pre/рузи 10.pdf" target="_blank">
+                  <iframe src="pre/рузи 10.pdf#toolbar=0&navpanes=0&scrollbar=0"></iframe>
+                  <p>Дарси 3</p>
+                </a>
+              </div>
+          
+              <!-- PDF 4 -->
+              <div class="pdf-item">
+                <a href="pre/рузи 11.pdf" target="_blank">
+                  <iframe src="pre/рузи 11.pdf#toolbar=0&navpanes=0&scrollbar=0"></iframe>
+                  <p>Дарси 4</p>
+                </a>
+              </div>
+          
+              <!-- PDF 5 -->
+              <div class="pdf-item">
+                <a href="pre/рузи 12.pdf" target="_blank">
+                  <iframe src="pre/рузи 12.pdf#toolbar=0&navpanes=0&scrollbar=0"></iframe>
+                  <p>Дарси 5</p>
+                </a>
+              </div>
+          
+              <!-- PDF 6 -->
+              <div class="pdf-item">
+                <a href="pre/рузи 13.pdf" target="_blank">
+                  <iframe src="pre/рузи 13.pdf#toolbar=0&navpanes=0&scrollbar=0"></iframe>
+                  <p>Дарси 6</p>
+                </a>
+              </div>
+            </div>
+          </div>
+    </div>
+
+    <footer style="background-color: #007c48; color: white; text-align: center; padding: 20px 0;">
+        <p>&copy; 2025 MS Excel.tj. Ҳамаи ҳуқуқҳо ҳифз шудаанд.</p>
+    </footer>
+    <script src="js/script.js" defer></script>
+</body>
+
+</html>

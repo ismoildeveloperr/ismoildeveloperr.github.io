@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Excel.tj</title>
+  <link rel="stylesheet" href="style/style.css" />
+  <link rel="stylesheet" href="style/slider.css" />
+  <link rel="stylesheet" href="style/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="style/styles.css" />
+</head>
+
+<body>
+  <div class="menu-container">
+    <img src="images/logo.png" class="logo" alt="logo" />
+    <button class="burger" onclick="toggleMenu()">☰ Меню</button>
+    <nav class="menu">
+      <a href="index.html">Асосӣ</a>
+      <a href="lessons.html#lessonsSection">Дарсҳо</a>
+      <a href="test.html#TestSection">Тестҳо</a>
+      <a href="materials.html#MaterialsSection">Маводҳо</a>
+      <!-- <a href="news.html#NewsSection">Хабархо</a>
+            <a href="#" id="subscribeBtn">Ба қайд гири</a> -->
+    </nav>
+  </div>
+
+  <div class="block1" id="TestSection">
+    <h1 class="title">Тестҳо барои санҷидани дониш</h1>
+  </div>
+
+      <div class="buttont">
+      <button onclick="startTest()">Оғози тест</button>
+    </div>
+
+    <div class="tab-contents" id="test-content">
+      <div class="tab-content active" data-tab="1">
+        <h1>Тест: Боби 1</h1>
+        <form id="quizForm">
+          <div class="question">
+            <p>1. Миқдори элементҳои ячейкаҳоро бармегардонад?</p>
+            <label><input type="radio" name="q1" value="1" /> COUNT()</label>
+            <label><input type="radio" name="q1" value="0" /> ABS(x)</label>
+            <label><input type="radio" name="q1" value="0" /> AVERAGE()</label>
+            <label><input type="radio" name="q1" value="0" /> SUM()</label>
+          </div>
+          <div class="question">
+            <p>2. Формула дар MS Excel бо кадом аломат сар мешавад?</p>
+            <label><input type="radio" name="q2" value="1" /> =</label>
+            <label><input type="radio" name="q2" value="0" /> +</label>
+            <label><input type="radio" name="q2" value="0" /> -</label>
+            <label><input type="radio" name="q2" value="0" /> /</label>
+          </div>
+          <div class="question">
+            <p>
+              3. Дар барномаи Ms Excel амалхо бо ин тартиб ичро мешаванд а)
+              зарб ва таксим б) чамъ ва тарх в) ифодахои дохили кавс?
+            </p>
+            <label><input type="radio" name="q3" value="1" /> а) в), а), б)</label>
+            <label><input type="radio" name="q3" value="0" /> а) в) </label>
+            <label><input type="radio" name="q3" value="0" /> в), а), б)</label>
+            <label><input type="radio" name="q3" value="0" /> а)</label>
+          </div>
+          <div class="question">
+            <p>
+              4. Тарзи дурусти дохилкунии синтаксиси функсияи факториалро
+              нишон дихед?
+            </p>
+            <label><input type="radio" name="q4" value="1" /> =ФАКТР(адад)</label>
+            <label><input type="radio" name="q4" value="0" /> =ФАКТР(матн)</label>
+            <label><input type="radio" name="q4" value="0" /> =ФАКТР(адади
+              манфи)</label>
+            <label><input type="radio" name="q4" value="0" /> =ФАКТОР(адад)</label>
+          </div>
+          <div class="question">
+            <p>
+              5. Тарафи квадрат маълум аст. Масохат ва периметрии он ёфта
+              шавад?
+            </p>
+            <label><input type="radio" name="q5" value="1" /> А2=А1^2 и А3=4*А1
+            </label>
+            <label><input type="radio" name="q5" value="0" /> А2=А1^3 и А3=3*А1
+            </label>
+            <label><input type="radio" name="q5" value="0" /> А2=А14 и А3=14*А1
+            </label>
+            <label><input type="radio" name="q5" value="0" /> А2=А1^12 и А3=41*А1
+            </label>
+          </div>
+          <div class="question">
+            <p>6. Катетхои секунчаи росткунча а ва b дода шудааст. Гипотенузаи секунча ёфта шавад?</p>
+            <label><input type="radio" name="q6" value="1" /> А3=КОРЕНЬ(A1^2+A2^2) </label>
+            <label><input type="radio" name="q6" value="0" /> А3=A1^2+A2^2 </label>
+            <label><input type="radio" name="q6" value="0" />А3=(A1^3+A2^2) </label>
+            <label><input type="radio" name="q6" value="0" /> А3=КОРЕНЬ(A1+A2) </label>
+
+          </div>
+          <div class="question">
+            <p>7. Мурочиаткуни (адресация) - ро маънидод кунед?</p>
+            <label><input type="radio" name="q7" value="1" /> Ин мурочиаткуни ба ячейка </label>
+            <label><input type="radio" name="q7" value="0" /> Ин мурочиаткуни ба матн </label>
+            <label><input type="radio" name="q7" value="0" /> Ин мурочиаткуни ба сурога </label>
+            <label><input type="radio" name="q7" value="0" /> Ин мурочиаткуни ба адад </label>
+
+          </div>
+          <div class="question">
+            <p>8. Мурочиаткунии нисби ва мутлак дар якчояги чи мешаванд?</p>
+            <label><input type="radio" name="q8" value="1" /> Мурочиаткунии омехта </label>
+            <label><input type="radio" name="q8" value="0" /> Мурочиаткунии нисби</label>
+            <label><input type="radio" name="q8" value="0" /> Мурочиаткунии табии </label>
+            <label><input type="radio" name="q8" value="0" /> Мурочиаткунии мутлак </label>
+
+          </div>
+          <div class="question">
+            <p>9. Символи $ барои ин хизмат мекунад?</p>
+            <label><input type="radio" name="q9" value="1" /> Ин символ барои нишон додани сатр ё сутун хизмат
+              мекунад</label>
+            <label><input type="radio" name="q9" value="0" /> Ин символ барои нишон додани аломат хизмат мекунад
+            </label>
+            <label><input type="radio" name="q9" value="0" /> Ин символ барои нишон додани матн хизмат мекунад </label>
+            <label><input type="radio" name="q9" value="0" /> Ин символ барои нишон додани символ хизмат мекунад
+            </label>
+
+          </div>
+          <div class="question">
+            <p>10. Мурочиаткунии мутлакро нишон дихед : =$A$1*C1?</p>
+            <label><input type="radio" name="q10" value="1" /> $A$1</label>
+            <label><input type="radio" name="q10" value="0" /> $A1 </label>
+            <label><input type="radio" name="q10" value="0" /> A$1 </label>
+            <label><input type="radio" name="q10" value="0" /> A1 </label>
+
+          </div>
+          <div class="question">
+            <p>11. Мурочиаткунии омехтаро нишон дихед: =A1*C$1?</p>
+            <label><input type="radio" name="q11" value="1" /> C$1 </label>
+            <label><input type="radio" name="q11" value="0" /> $C$1 </label>
+            <label><input type="radio" name="q11" value="0" /> C1 </label>
+            <label><input type="radio" name="q11" value="0" /> C$1$ </label>
+
+          </div>
+          <div class="question">
+            <p>12. Функсияи ABS барои ин хизмат мекунад?</p>
+            <label><input type="radio" name="q12" value="1" />Киммати мутлаки ададро хосил мекунад</label>
+            <label><input type="radio" name="q12" value="0" /> Киммати манфии ададро хосил мекунад</label>
+            <label><input type="radio" name="q12" value="0" /> Киммати нулии ададро хосил мекунад </label>
+            <label><input type="radio" name="q12" value="0" /> Киммати сатрии ададро хосил мекунад </label>
+
+          </div>
+          <div class="question">
+            <p>13. Китоби MS Excel хамчун html сахифа ин тавр сабт карда мешавад?</p>
+            <label><input type="radio" name="q13" value="1" /> Менюи Файл баъд «сохранить как» </label>
+            <label><input type="radio" name="q13" value="0" /> Менюи правка баъд «сохранить»</label>
+            <label><input type="radio" name="q13" value="0" /> Менюи Сервис баъд «сохранить как» </label>
+            <label><input type="radio" name="q13" value="0" /> Менюи Формат баъд «сохранить » </label>
+
+          </div>
+          <div class="question">
+            <p>14. Ин тавр бо тези орфографияро дар MS Excel месанчанд?</p>
+            <label><input type="radio" name="q14" value="1" /> Пахши тугмачаи F7 </label>
+            <label><input type="radio" name="q14" value="0" /> Пахши тугмачаи F5 </label>
+            <label><input type="radio" name="q14" value="0" /> Пахши тугмачаи F2</label>
+            <label><input type="radio" name="q14" value="0" /> Пахши тугмачаи F11 </label>
+
+          </div>
+          <div class="question">
+            <p>15. Дар A1:F16 пайдарпаии 2, -2, 2, -2 … ин тавр хосил мекунанд?</p>
+            <label><input type="radio" name="q15" value="1" /> A2=-A1 гузошта нусхабардори мекунанд </label>
+            <label><input type="radio" name="q15" value="0" /> A2=-A4 гузошта нусхабардори мекунанд </label>
+            <label><input type="radio" name="q15" value="0" /> A3=-A5 гузошта нусхабардори мекунанд </label>
+            <label><input type="radio" name="q15" value="0" /> A2=A1 гузошта нусхабардори мекунанд </label>
+
+          </div>
+          <div class="question">
+            <p>16. Чойивазкунии сатр ва сутунро маънидод кунед?</p>
+            <label><input type="radio" name="q16" value="1" /> Транспониронидан </label>
+            <label><input type="radio" name="q16" value="0" /> Обмен </label>
+            <label><input type="radio" name="q16" value="0" /> Матритсайи баръакса </label>
+            <label><input type="radio" name="q16" value="0" /> Муаянкунанда </label>
+
+          </div>
+          <div class="question">
+            <p>17. Формуларо ин тавр мегуянд?</p>
+            <label><input type="radio" name="q17" value="1" />Ин ифодае ки аз адад функсия ва мурочиаткуни ки ба воситаи
+              амалхои арифметики пайваст карда шудааст меноманд</label>
+            <label><input type="radio" name="q17" value="0" /> Ин ифодае ки аз адад функсия ва мурочиаткуни ки ба
+              воситаи амалхои мантики пайваст карда шудааст меноманд </label>
+            <label><input type="radio" name="q17" value="0" /> Ин ифодае ки аз адад ки ба воситаи амалхои арифметики
+              пайваст карда шудааст меноманда </label>
+            <label><input type="radio" name="q17" value="0" /> Ин ифодае ки аз мурочиаткуни ки ба воситаи амалхои
+              мукоисакуни пайваст карда шудааст меноманд </label>
+
+          </div>
+          <div class="question">
+            <p>18. Бо ин рох «автосумма»-ро ба кор меандозанд?</p>
+            <label><input type="radio" name="q18" value="1" />Ба воситаи панели асбобхо </label>
+            <label><input type="radio" name="q18" value="0" />Ба воситаи сатри меню </label>
+            <label><input type="radio" name="q18" value="0" />Ба воситаи сатри формула </label>
+            <label><input type="radio" name="q18" value="0" />Ба воситаи майдони ном </label>
+
+          </div>
+          <div class="question">
+            <p>19. Чадвали додашударо ин тавр транспониронидан мумкин?</p>
+            <label><input type="radio" name="q19" value="1" />«Правка - Специальная вставка - Транспонирование» </label>
+            <label><input type="radio" name="q19" value="0" /> «Вставка - Специальная вставка - Транспонирование»
+            </label>
+            <label><input type="radio" name="q19" value="0" /> «Вставка - Специальная вставка - Транспонирование»
+            </label>
+            <label><input type="radio" name="q19" value="0" /> «Сервис - Специальная вставка - Транспонирование»
+            </label>
+
+          </div>
+          <div class="question">
+            <p>20. Дар MS Excel ба воситаи ин ифодахо хисобкунии сода ичро карда мешавад?</p>
+            <label><input type="radio" name="q20" value="1" /> формулаҳо </label>
+            <label><input type="radio" name="q20" value="0" /> ифодаҳо </label>
+            <label><input type="radio" name="q20" value="0" /> матнҳо </label>
+            <label><input type="radio" name="q20" value="0" /> ададҳо </label>
+
+          </div>
+          <div class="question">
+            <p>21. Равзанаи «мастер функций» хангоми кушодан ин функсияхоро нишон медихад?</p>
+            <label><input type="radio" name="q21" value="1" />10 функсияи охирин кор кардашуда </label>
+            <label><input type="radio" name="q21" value="0" />10 функсияи охирини математики </label>
+            <label><input type="radio" name="q21" value="0" />10 функсияи охирини мантики </label>
+            <label><input type="radio" name="q21" value="0" />10 функсияи охирини омори </label>
+
+          </div>
+          <div class="question">
+            <p>22. Функсияи МАКС барои ин хизмат мекунад?</p>
+            <label><input type="radio" name="q22" value="1" /> Киммати калонтарин байни ададхоро меёбад </label>
+            <label><input type="radio" name="q22" value="0" /> Киммати хурдтарин байни ададхоро меёбад</label>
+            <label><input type="radio" name="q22" value="0" /> Киммати байни ададхоро меёбад </label>
+            <label><input type="radio" name="q22" value="0" /> Киммати калонтарин байни ададхои манфиро меёбад </label>
+
+          </div>
+          <div class="question">
+            <p>23. Функцияи СЕГОДНЯ() ба ин категория дохил мешавад?</p>
+            <label><input type="radio" name="q23" value="1" /> Сана ва вакти рузи чори </label>
+            <label><input type="radio" name="q23" value="0" /> Сана </label>
+            <label><input type="radio" name="q23" value="0" />Вакт</label>
+            <label><input type="radio" name="q23" value="0" /> Сана ва вакти дилхох </label>
+
+          </div>
+          <div class="question">
+            <p>24. Ададхои хакикии x, у, z дода шудааст. Хисоб кунед : max (x+y+z, xyz)?</p>
+            <label><input type="radio" name="q24" value="1" /> A1=x+y+z; A2=x*y*z МАКС(А1;А2) </label>
+            <label><input type="radio" name="q24" value="0" /> A1=x+y-z; A2=x*y/z МАКС(А1;А2) </label>
+            <label><input type="radio" name="q24" value="0" /> A1=x*y+z; A2=x*y*z МАКС(А1;А2) </label>
+            <label><input type="radio" name="q24" value="0" /> A1=x+y++z; A2=x*y*z МАКС(А1;А2) </label>
+
+          </div>
+          <div class="question">
+            <p>25. Функсияи СРЗНАЧ барои ин хизмат мекунад?</p>
+            <label><input type="radio" name="q25" value="1" />Киммати миёнаи ададхои додашударо меёбад </label>
+            <label><input type="radio" name="q25" value="0" /> шумораи ададхои додашударо меёбад</label>
+            <label><input type="radio" name="q25" value="0" /> Киммати ададхои додашударо меёбад </label>
+            <label><input type="radio" name="q25" value="0" /> шумораи миёнаи ададхои додашударо меёбад </label>
+
+          </div>
+          <div class="question">
+            <p>26. Як бодро бо тарзи дигар тавсиф кунед?</p>
+            <label><input type="radio" name="q26" value="1" /> 1 бит/c </label>
+            <label><input type="radio" name="q26" value="0" /> 1 байт/дак </label>
+            <label><input type="radio" name="q26" value="0" /> 10 бит/с </label>
+            <label><input type="radio" name="q26" value="0" /> 1 байт/c </label>
+
+          </div>
+          <div class="question">
+            <p>27. Объектхои асосие, ки ҳангоми кушодани барномаи MS Excel сарукордор мешавем?</p>
+            <label><input type="radio" name="q27" value="1" /> китоби кори, варақа(лист), ячейка </label>
+            <label><input type="radio" name="q27" value="0" /> Сатри сарлавха, сатри меню </label>
+            <label><input type="radio" name="q27" value="0" /> китоби кори, варақа(лист), диапазон </label>
+            <label><input type="radio" name="q27" value="0" /> китоби кори, сатри меню </label>
+
+          </div>
+          <div class="question">
+            <p>28. Бо кадом тарз кимати мутлақи ададро дар барномаи MS Word бармегардонанд?</p>
+            <label><input type="radio" name="q28" value="1" />ABS(x) </label>
+            <label><input type="radio" name="q28" value="0" /> AVERAGE() </label>
+            <label><input type="radio" name="q28" value="0" /> COUNT()1 </label>
+            <label><input type="radio" name="q28" value="0" /> SUM() </label>
+
+          </div>
+          <div class="question">
+            <p>29. Барномаи MS Excel аз чанд варакаи стандарти иборат аст?</p>
+            <label><input type="radio" name="q29" value="1" /> 3 </label>
+            <label><input type="radio" name="q29" value="0" /> 2 </label>
+            <label><input type="radio" name="q29" value="0" /> 4 </label>
+            <label><input type="radio" name="q29" value="0" /> 5 </label>
+
+          </div>
+          <div class="question">
+            <p>30. Дар барномаи MS Excel буриши сатр ва сутунро бо кадом ном мешиносанд?</p>
+            <label><input type="radio" name="q30" value="1" /> ячейка </label>
+            <label><input type="radio" name="q30" value="0" /> сутунхо </label>
+            <label><input type="radio" name="q30" value="0" /> сатру сутунхо </label>
+            <label><input type="radio" name="q30" value="0" /> диапазон </label>
+          </div>
+          <div class="question">
+            <p>31. Сутунхо дар барномаи Ms Excel  бо кадом харфхо ишора карда мешавад?</p>
+            <label><input type="radio" name="q31" value="1" />бо харфи лотини А - XFD</label>
+            <label><input type="radio" name="q31" value="0" />Бо харфи лотини А - XTD</label>
+            <label><input type="radio" name="q31" value="0" />Бо харфи лотини А - XLD</label>
+            <label><input type="radio" name="q31" value="0" />Бо харфи лотини А - XVD</label>
+          </div>
+          
+          <div class="question">
+            <p>32. Маълумоти ададӣ хангоми пахш намудани Enter дар кадом тарафи ячейка чойгир мешавад?</p>
+            <label><input type="radio" name="q32" value="1" /> дар тарафи рости ячейка </label>
+            <label><input type="radio" name="q32" value="0" /> дар тарафи чапи ячейка </label>
+            <label><input type="radio" name="q32" value="0" /> дар болои ячейка</label>
+            <label><input type="radio" name="q32" value="0" /> дар мобайни ячейка </label>
+          </div>
+          
+          <div class="question">
+            <p>33. Маълумоти матни  хангоми пахш намудани Enter дар кадом тарафи ячейка чойгир мешавад?</p>
+            <label><input type="radio" name="q33" value="1" /> дар тарафи чапи ячейка </label>
+            <label><input type="radio" name="q33" value="0" /> дар тарафи рости ячейка </label>
+            <label><input type="radio" name="q33" value="0" />дар мобайни ячейка </label>
+            <label><input type="radio" name="q33" value="0" /> дар зери ячейка </label>
+          </div>
+          
+          <div class="question">
+            <p>34. Хангоми хисоб кардани масъала дар барномаи Ms.Excel бо кадом аломат бояд огоз шавад?</p>
+            <label><input type="radio" name="q34" value="1" /> баробари </label>
+            <label><input type="radio" name="q34" value="0" /> тире </label>
+            <label><input type="radio" name="q34" value="0" /> ҷамъ </label>
+            <label><input type="radio" name="q34" value="0" /> тарҳ </label>
+          </div>
+          
+          <div class="question">
+            <p>35. Чанд намуди маълумот дар Ms.Excel мавчуд аст, муайян кунед?</p>
+            <label><input type="radio" name="q35" value="1" /> 3 </label>
+            <label><input type="radio" name="q35" value="0" /> 4 </label>
+            <label><input type="radio" name="q35" value="0" /> 5 </label>
+            <label><input type="radio" name="q35" value="0" /> 6 </label>
+          </div>
+          
+          <div class="question">
+            <p>36. Дар программаи Excel кадом намудхои диапозони ячейкахо чой доранд?</p>
+            <label><input type="radio" name="q36" value="1" /> сатри, сутуни, росткунчави </label>
+            <label><input type="radio" name="q36" value="0" /> сутуни, росткунчави </label>
+            <label><input type="radio" name="q36" value="0" /> сатри, сутуни, секунчави </label>
+            <label><input type="radio" name="q36" value="0" /> сатри, росткунчави </label>
+          </div>
+          
+          <div class="question">
+            <p>37. Дар барномаи Excel диапазони сатри кадом аст?</p>
+            <label><input type="radio" name="q37" value="1" /> А1:W1 </label>
+            <label><input type="radio" name="q37" value="0" /> A1:А10 </label>
+            <label><input type="radio" name="q37" value="0" /> А1:В1 </label>
+            <label><input type="radio" name="q37" value="0" /> А3:W1 </label>
+          </div>
+          
+          <div class="question">
+            <p>38. Дар барномаи Excel диапазони сутуни кадом аст?</p>
+            <label><input type="radio" name="q38" value="1" /> A1:А10 </label>
+            <label><input type="radio" name="q38" value="0" /> А1:W1 </label>
+            <label><input type="radio" name="q38" value="0" /> А1:В1 </label>
+            <label><input type="radio" name="q38" value="0" /> А2:В10 </label>
+          </div>
+          
+          <div class="question">
+            <p>39. Дар барномаи Excel диапазони росткунчави кадом аст?</p>
+            <label><input type="radio" name="q39" value="1" /> А1:В1 </label>
+            <label><input type="radio" name="q39" value="0" /> А1:W1 </label>
+            <label><input type="radio" name="q39" value="0" /> A1:А10 </label>
+            <label><input type="radio" name="q39" value="0" /> А3:W1 </label>
+          </div>
+          
+          <div class="question">
+            <p>40. Тарзи кушодани  барномаи Ms excel бо воситаи комбинатсияи ... </p>
+            <label><input type="radio" name="q40" value="1" /> <<Пуск + R>> Выпольнить баъд excel навишта мешавад </label>
+            <label><input type="radio" name="q40" value="0" /> <<Пуск + М>> Выпольнить баъд excel навишта мешавад </label>
+            <label><input type="radio" name="q40" value="0" /> <<Пуск + Т>> Выпольнить баъд excel навишта мешавад </label>
+            <label><input type="radio" name="q40" value="0" /> <<Пуск + У>> Выпольнить баъд excel навишта мешавад </label>
+          </div>
+          
+          <div class="question">
+            <p>41.Тарзи кушодани сахифаи нав дар MS Excel бо воситаи тугмахо...</p>
+            <label><input type="radio" name="q41" value="1" /> Ctrl+N </label>
+            <label><input type="radio" name="q41" value="0" /> Ctrl+M </label>
+            <label><input type="radio" name="q41" value="0" /> Ctrl+O </label>
+            <label><input type="radio" name="q41" value="0" /> Ctrl+F </label>
+          </div>
+          
+          <div class="question">
+            <p>42.Кадом тугма барои дидани охири харфи сутунхо истифода бурда мешавад?</p>
+            <label><input type="radio" name="q42" value="1" /> Ctrl+cтрелка </label>
+            <label><input type="radio" name="q42" value="0" /> Ctrl+D </label>
+            <label><input type="radio" name="q42" value="0" /> Ctrl+O </label>
+            <label><input type="radio" name="q42" value="0" /> Ctrl+кавс </label>
+          </div>
+          
+          <div class="question">
+            <p>43. Дар холати аз як ячейка ба ячейкаи дигар кучонидан формулахои Ms Excel ба таври автомати сурогаи онро ислох мекунад?</p>
+            <label><input type="radio" name="q43" value="1" /> сурогабанди </label>
+            <label><input type="radio" name="q43" value="0" /> функсия</label>
+            <label><input type="radio" name="q43" value="0" /> автосумма </label>
+            <label><input type="radio" name="q43" value="0" /> диаграмма </label>
+          </div>
+          
+          <div class="question">
+            <p>44. Кадом намудхои мурочиаткуни дар барномаи MS Excel мавҷуданд?</p>
+            <label><input type="radio" name="q44" value="1" /> нисби, мутлак, омехта  </label>
+            <label><input type="radio" name="q44" value="0" /> нисби, мутлак  </label>
+            <label><input type="radio" name="q44" value="0" /> мутлак, омехта  </label>
+            <label><input type="radio" name="q44" value="0" /> нисби,  омехта </label>
+          </div>
+          
+          <div class="question">
+            <p>45. Намудхои мурочиаткуни бо кадом аломат навишта мешавад?</p>
+            <label><input type="radio" name="q45" value="1" /> бо аломати доллар </label>
+            <label><input type="radio" name="q45" value="0" /> бо аломати рубл </label>
+            <label><input type="radio" name="q45" value="0" /> бо аломати сомони</label>
+            <label><input type="radio" name="q45" value="0" /> бо аломати евро </label>
+          </div>
+          
+          <div class="question">
+            <p>46. Бо воситаи кадом клавиш намуди мурочиаткуниро дигар мернамоем?</p>
+            <label><input type="radio" name="q46" value="1" /> F4 </label>
+            <label><input type="radio" name="q46" value="0" /> F2 </label>
+            <label><input type="radio" name="q46" value="0" /> F3 </label>
+            <label><input type="radio" name="q46" value="0" /> F5 </label>
+          </div>
+          
+          <div class="question">
+            <p>47. Намуди мурочиаткунии нисбиро муайян кунед?</p>
+            <label><input type="radio" name="q47" value="1" /> А1 </label>
+            <label><input type="radio" name="q47" value="0" /> $A$1 </label>
+            <label><input type="radio" name="q47" value="0" /> $A1 </label>
+            <label><input type="radio" name="q47" value="0" /> A$1 </label>
+          </div>
+          
+          <div class="question">
+            <p>48. Намуди мурочиаткунии мутлакро муайян кунед?</p>
+            <label><input type="radio" name="q48" value="1" /> $A$1 </label>
+            <label><input type="radio" name="q48" value="0" /> $A1 </label>
+            <label><input type="radio" name="q48" value="0" /> A$1 </label>
+            <label><input type="radio" name="q48" value="0" /> A1 </label>
+          </div>
+          
+          <div class="question">
+            <p>49. Намуди мурочиаткунии омехтаи сутуниро муайян кунед?</p>
+            <label><input type="radio" name="q49" value="1" /> $А1 </label>
+            <label><input type="radio" name="q49" value="0" /> $А$1 </label>
+            <label><input type="radio" name="q49" value="0" /> А1 </label>
+            <label><input type="radio" name="q49" value="0" /> А$1 </label>
+          </div>
+          
+          <div class="question">
+            <p>50. Намуди мурочиаткунии омехтаи сатриро муайян кунед?</p>
+            <label><input type="radio" name="q50" value="1" /> A$1 </label>
+            <label><input type="radio" name="q50" value="0" /> $A1 </label>
+            <label><input type="radio" name="q50" value="0" /> A1 </label>
+            <label><input type="radio" name="q50" value="0" /> $A$1 </label>
+          </div>
+
+          <button type="button" onclick="checkResult()">
+            Натиҷаи тафтиш
+          </button>
+        </form>
+        <div id="result"></div>
+      </div>
+    </div>
+  </div>
+  <footer style="background-color: #007c48; color: white; text-align: center; padding: 20px 0;">
+    <p>&copy; 2025 MS Excel.tj. Ҳамаи ҳуқуқҳо ҳифз шудаанд.</p>
+  </footer>
+
+  <script src="js/swiper-bundle.min.js"></script>
+  <script src="js/script.js" defer></script>
+</body>
+
+</html>
