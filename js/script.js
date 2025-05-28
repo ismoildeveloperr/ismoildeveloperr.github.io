@@ -62,7 +62,6 @@ document.addEventListener("DOMContentLoaded", function () {
     evt.currentTarget.classList.add("active");
   }
 
-  // Обработка теста
   window.checkResult = function () {
     const form = document.getElementById("quizForm");
     const resultDiv = document.getElementById("result");
